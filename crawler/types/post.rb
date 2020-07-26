@@ -29,7 +29,7 @@ module ZendeskIntegration::V2::Zendesk
       super.merge(
         title: @zendesk_obj.title,
         topic: topic.simple,
-        details: truncate(decode(@zendesk_obj.details)),
+        details: decode(@zendesk_obj.details),
         featured: @zendesk_obj.featured,
         closed: @zendesk_obj.closed,
         comments: {
